@@ -9,6 +9,9 @@ import java.io.*;
  */
 public class Demo5_Buffer {
     public static void main(String[] args) throws IOException {
+        /*
+        *  缓存流使用了，内存的运算效率比硬盘要高的多，所有只要降低硬盘的读写次数就会提高效率
+        * */
         FileInputStream fis = new FileInputStream("韩宝仪-粉红色的回忆.mp3");//创建对象输入流，关联。MP3
         FileOutputStream fos = new FileOutputStream("mhj.mp3");//创建对象输出流，关联.mp3
         BufferedInputStream bis = new BufferedInputStream(fis); //创建缓存区对象，对输入流进行包装让其变得更加强大

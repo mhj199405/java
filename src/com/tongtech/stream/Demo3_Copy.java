@@ -15,10 +15,10 @@ public class Demo3_Copy {
         FileInputStream fis = new FileInputStream("2.jpg");//创建输入流对象，关联2.jpg
         FileOutputStream fos = new FileOutputStream("copy.jpg");
         int b;
-        while ((b=fis.read())!=-1){
-            fos.write(b);
+        while ((b=fis.read())!=-1){ //不断的读取每一个字节
+            fos.write(b); //将每一个字节写出
         }
-        fis.close();
+        fis.close(); //关流释放资源
         fos.close();
     }
 }

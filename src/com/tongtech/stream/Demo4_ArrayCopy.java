@@ -15,7 +15,19 @@ public class Demo4_ArrayCopy {
     * 定义小数组
     * */
     public static void main(String[] args) throws IOException {
-        //demo1();
+         // demo1();
+         // demo2();
+        FileInputStream fis = new FileInputStream("韩宝仪-粉红色的回忆.mp3");
+        FileOutputStream fos = new FileOutputStream("copy.mp3");
+        byte[] arr=new byte[1024*8];
+        int length;
+        while ((length= fis.read(arr))!=-1){//如果忘记了加arr,返回的不是读取有效的字节个数，而是字节的码表值
+            fos.write(arr,0,length);
+        }
+        fis.close();
+        fos.close();
+    }
+    public static void demo2() throws IOException {
         FileInputStream fis = new FileInputStream("xxx.txt");
         FileOutputStream fos = new FileOutputStream("mmm.txt");
         byte[] arr=new byte[2];
